@@ -1,9 +1,9 @@
 ﻿namespace Shop.UIForms.ViewModels
 {
-    using Common.Models;
-    using Common.Services;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using Common.Models;
+    using Common.Services;
     using Xamarin.Forms;
 
     public class ProductsViewModel : BaseViewModel
@@ -37,7 +37,9 @@
             var response = await this.apiService.GetListAsync<Product>(
                 "https://shopzulu.azurewebsites.net",
                 "/api",
-                "/Products");
+                "/Products",
+                "bearer",
+                MainViewModel.GetInstance().Token.Token);
 
             this.IsRefreshing = false;
 
