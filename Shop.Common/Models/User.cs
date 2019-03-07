@@ -1,10 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Shop.Common.Models
+﻿namespace Shop.Common.Models
 {
+    using System;
+    using Newtonsoft.Json;
+
     public partial class User
     {
         [JsonProperty("firstName")]
