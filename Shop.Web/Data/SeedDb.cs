@@ -56,7 +56,7 @@
             var user = await this.userHelper.GetUserByEmailAsync(userName);
             if (user == null)
             {
-                user = await this.AddUser(userName, firstName, lastName);
+                user = await this.AddUser(userName, firstName, lastName, role);
             }
 
             var isInRole = await this.userHelper.IsUserInRoleAsync(user, role);
@@ -68,7 +68,7 @@
             return user;
         }
 
-        private async Task<User> AddUser(string userName, string firstName, string lastName)
+        private async Task<User> AddUser(string userName, string firstName, string lastName, string role)
         {
             var user = new User
             {
@@ -88,7 +88,7 @@
                 throw new InvalidOperationException("Could not create the user in seeder");
             }
 
-            await this.userHelper.AddUserToRoleAsync(user, "Admin");
+            await this.userHelper.AddUserToRoleAsync(user, role);
             var token = await this.userHelper.GenerateEmailConfirmationTokenAsync(user);
             await this.userHelper.ConfirmEmailAsync(user, token);
             return user;
@@ -146,7 +146,8 @@
                 Price = price,
                 IsAvailabe = true,
                 Stock = this.random.Next(100),
-                User = user
+                User = user,
+                ImageUrl = $"~/images/Products/{name}.png"
             });
         }
     }

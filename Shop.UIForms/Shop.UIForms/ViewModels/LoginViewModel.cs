@@ -77,8 +77,9 @@
                 Username = this.Email
             };
 
+            var url = Application.Current.Resources["UrlAPI"].ToString();
             var response = await this.apiService.GetTokenAsync(
-                "https://shopprep.azurewebsites.net",
+                url,
                 "/Account",
                 "/CreateToken",
                 request);

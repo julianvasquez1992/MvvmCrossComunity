@@ -40,6 +40,15 @@
                 fk.DeleteBehavior = DeleteBehavior.Restr­ict;
             }
 
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                var table = entityType.Relational().TableName;
+                if (table.StartsWith("AspNet"))
+                {
+                    entityType.Relational().TableName = table.Substring(6);
+                }
+            };
+
             base.OnModelCreating(modelBuilder);
         }
     }
