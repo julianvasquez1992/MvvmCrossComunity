@@ -35,9 +35,9 @@
         {
             get
             {
-                if(string.IsNullOrEmpty(this.ImageUrl))
+                if (string.IsNullOrEmpty(this.ImageUrl))
                 {
-                    return null;
+                    return "noImage";
                 }
 
                 return $"https://shopzulu.azurewebsites.net{this.ImageUrl.Substring(1)}";

@@ -97,6 +97,8 @@
             var mainViewModel = MainViewModel.GetInstance();
             mainViewModel.Token = token;
             mainViewModel.Products = new ProductsViewModel();
+            mainViewModel.UserEmail = this.Email;
+            mainViewModel.UserPassword = this.Password;
             Application.Current.MainPage = new MasterPage();
         }
     }
