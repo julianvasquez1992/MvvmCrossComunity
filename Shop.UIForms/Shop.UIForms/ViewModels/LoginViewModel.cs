@@ -4,6 +4,9 @@
     using Common.Models;
     using Common.Services;
     using GalaSoft.MvvmLight.Command;
+    using Newtonsoft.Json;
+    using Shop.Common.Helpers;
+    using Shop.UIForms.Helpers;
     using Views;
     using Xamarin.Forms;
 
@@ -29,14 +32,15 @@
 
         public string Password { get; set; }
 
+        public bool IsRemember { get; set; }
+
         public ICommand LoginCommand => new RelayCommand(Login);
 
         public LoginViewModel()
         {
             this.apiService = new ApiService();
             this.IsEnabled = true;
-            this.Email = "jzuluaga55@gmail.com";
-            this.Password = "123456";
+            this.IsRemember = true;
         }
 
         private async void Login()
@@ -44,28 +48,19 @@
             if (string.IsNullOrEmpty(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an email.",
-                    "Accept");
+                    Languages.Error, 
+                    Languages.EmailMessage, 
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.Password))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a password.",
-                    "Accept");
-                return;
-            }
-
-            if (!this.Email.Equals("jzuluaga55@gmail.com") || !this.Password.Equals("123456"))
-            {
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "User or password wrong.",
-                    "Accept");
-                return;
+                    Languages.Error, 
+                    Languages.PasswordMessage, 
+                    Languages.Accept);
+                    return;
             }
 
             this.IsRunning = true;
@@ -89,7 +84,10 @@
 
             if (!response.IsSuccess)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Email or password incorrect.", "Accept");
+                await Application.Current.MainPage.DisplayAlert(
+                    Languages.Error, 
+                    Languages.EmailOrPasswordIncorrect, 
+                    Languages.Accept);
                 return;
             }
 
@@ -99,6 +97,12 @@
             mainViewModel.Products = new ProductsViewModel();
             mainViewModel.UserEmail = this.Email;
             mainViewModel.UserPassword = this.Password;
+
+            Settings.IsRemember = this.IsRemember;
+            Settings.UserEmail = this.Email;
+            Settings.UserPassword = this.Password;
+            Settings.Token = JsonConvert.SerializeObject(token);
+
             Application.Current.MainPage = new MasterPage();
         }
     }

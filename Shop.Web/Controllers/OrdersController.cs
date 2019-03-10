@@ -101,6 +101,28 @@
             return View(model);
         }
 
+        public async Task<IActionResult> Increase(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            await this.orderRepository.ModifyOrderDetailTempQuantityAsync(id.Value, 1);
+            return this.RedirectToAction("Create");
+        }
+
+        public async Task<IActionResult> Decrease(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            await this.orderRepository.ModifyOrderDetailTempQuantityAsync(id.Value, -1);
+            return this.RedirectToAction("Create");
+        }
+
         [HttpPost]
         public async Task<IActionResult> Deliver(DeliverViewModel model)
         {

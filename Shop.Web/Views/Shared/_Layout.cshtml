@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Shop.Web</title>
 
+    <environment include="Production">
+        <link href="~/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    </environment>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link href="~/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />

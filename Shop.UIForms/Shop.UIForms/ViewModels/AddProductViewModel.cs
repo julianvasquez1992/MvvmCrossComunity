@@ -83,6 +83,9 @@
                 "bearer",
                 MainViewModel.GetInstance().Token.Token);
 
+            this.IsRunning = false;
+            this.IsEnabled = true;
+
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", response.Message, "Accept");
@@ -90,12 +93,7 @@
             }
 
             var newProduct = (Product)response.Result;
-            var mainViewModel = MainViewModel.GetInstance();
-            mainViewModel.Products.Products.Add(newProduct);
-            var list = mainViewModel.Products.Products.OrderBy(p => p.Name).ToList();
-            mainViewModel.Products.Products = new ObservableCollection<Product>(list);
-            this.IsRunning = false;
-            this.IsEnabled = true;
+            MainViewModel.GetInstance().Products.AddProductToList(newProduct);
             await App.Navigator.PopAsync();
         }
     }
