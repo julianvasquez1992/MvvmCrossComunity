@@ -1,5 +1,6 @@
 ﻿namespace Shop.UIForms.ViewModels
 {
+    using System;
     using System.Windows.Input;
     using Common.Models;
     using Common.Services;
@@ -34,7 +35,9 @@
 
         public bool IsRemember { get; set; }
 
-        public ICommand LoginCommand => new RelayCommand(Login);
+        public ICommand LoginCommand => new RelayCommand(this.Login);
+
+        public ICommand RegisterCommand => new RelayCommand(this.Register);
 
         public LoginViewModel()
         {
@@ -104,6 +107,12 @@
             Settings.Token = JsonConvert.SerializeObject(token);
 
             Application.Current.MainPage = new MasterPage();
+        }
+
+        private async void Register()
+        {
+            MainViewModel.GetInstance().Register = new RegisterViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new RegisterPage());
         }
     }
 }

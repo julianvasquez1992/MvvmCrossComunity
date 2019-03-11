@@ -139,7 +139,7 @@
     <value>Senha</value>
   </data>
   <data name="PasswordPlaceHolder" xml:space="preserve">
-    <value>Digite sua senha</value>
+    <value>Digite sua senha...</value>
   </data>
   <data name="Remember" xml:space="preserve">
     <value>Lembre-se neste dispositivo</value>
@@ -149,5 +149,11 @@
   </data>
   <data name="EmailOrPasswordIncorrect" xml:space="preserve">
     <value>E-mail ou senha incorretos.</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Novo Formando</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>¿Esqueceu sua senha?</value>
   </data>
 </root>

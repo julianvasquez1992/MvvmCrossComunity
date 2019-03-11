@@ -150,4 +150,10 @@
   <data name="EmailOrPasswordIncorrect" xml:space="preserve">
     <value>Email or password incorrect.</value>
   </data>
+  <data name="Register" xml:space="preserve">
+    <value>New User</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
 </root>
