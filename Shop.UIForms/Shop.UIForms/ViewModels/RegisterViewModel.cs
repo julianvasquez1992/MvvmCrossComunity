@@ -241,6 +241,9 @@
                 "/Account",
                 request);
 
+            this.IsRunning = false;
+            this.IsEnabled = true;
+
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(
