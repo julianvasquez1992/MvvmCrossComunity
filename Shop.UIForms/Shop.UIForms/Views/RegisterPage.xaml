@@ -60,11 +60,92 @@
                     <Picker
                         Grid.Column="1"
                         Grid.Row="3"
+                        ItemDisplayBinding="{Binding Name}"
                         ItemsSource="{Binding Countries}"
                         SelectedItem="{Binding Country}"
                         Title="Select a country...">
                     </Picker>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="City"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Picker
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        ItemDisplayBinding="{Binding Name}"
+                        ItemsSource="{Binding Cities}"
+                        SelectedItem="{Binding City}"
+                        Title="Select a city...">
+                    </Picker>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Text="Address"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        Keyboard="Email"
+                        Placeholder="Enter your address..."
+                        Text="{Binding Address}">
+                    </Entry>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="Phone"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="6"
+                        Keyboard="Telephone"
+                        Placeholder="Enter your phone number..."
+                        Text="{Binding Phone}">
+                    </Entry>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Text="Password"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="7"
+                        IsPassword="True"
+                        Placeholder="Enter your password..."
+                        Text="{Binding Password}">
+                    </Entry>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="Password confirm"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="8"
+                        IsPassword="True"
+                        Placeholder="Enter your password confirm..."
+                        Text="{Binding Confirm}">
+                    </Entry>
                 </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+                <Button
+                    BackgroundColor="Navy"
+                    BorderRadius="23"
+                    Command="{Binding RegisterCommand}"
+                    HeightRequest="46"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsEnabled}"
+                    Text="Register New User"
+                    TextColor="White">
+                </Button>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
