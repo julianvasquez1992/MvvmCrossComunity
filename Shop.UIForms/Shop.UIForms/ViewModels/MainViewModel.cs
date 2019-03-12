@@ -41,6 +41,8 @@
 
         public ProfileViewModel Profile { get; set; }
 
+        public ChangePasswordViewModel ChangePassword { get; set; }
+
         public ICommand AddProductCommand => new RelayCommand(this.GoAddProduct);
 
         public MainViewModel()

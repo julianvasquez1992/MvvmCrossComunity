@@ -3,7 +3,7 @@
     using System.Threading.Tasks;
     using Data.Entities;
     using Microsoft.AspNetCore.Identity;
-    using Shop.Web.Models;
+    using Models;
 
     public class UserHelper : IUserHelper
     {
