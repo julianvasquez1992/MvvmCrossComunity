@@ -6,6 +6,7 @@
     public static class Settings
     {
         private const string token = "token";
+        private const string user = "user";
         private const string userEmail = "userEmail";
         private const string userPassword = "userPassword";
         private const string isRemember = "isRemember";
@@ -18,6 +19,12 @@
         {
             get => AppSettings.GetValueOrDefault(token, stringDefault);
             set => AppSettings.AddOrUpdateValue(token, value);
+        }
+
+        public static string User
+        {
+            get => AppSettings.GetValueOrDefault(user, stringDefault);
+            set => AppSettings.AddOrUpdateValue(user, value);
         }
 
         public static string UserEmail

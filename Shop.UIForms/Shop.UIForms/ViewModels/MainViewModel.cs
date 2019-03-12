@@ -1,16 +1,23 @@
 ﻿namespace Shop.UIForms.ViewModels
 {
-    using Common.Models;
-    using GalaSoft.MvvmLight.Command;
-    using Shop.UIForms.Views;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Windows.Input;
+    using Common.Models;
+    using GalaSoft.MvvmLight.Command;
+    using Shop.UIForms.Views;
 
-    public class MainViewModel
+    public class MainViewModel :BaseViewModel
     {
         private static MainViewModel instance;
+        private User user;
+
+        public User User
+        {
+            get => this.user;
+            set => this.SetValue(ref this.user, value);
+        }
 
         public string UserEmail { get; set; }
 
@@ -31,6 +38,8 @@
         public RegisterViewModel Register { get; set; }
 
         public RememberPasswordViewModel RememberPassword { get; set; }
+
+        public ProfileViewModel Profile { get; set; }
 
         public ICommand AddProductCommand => new RelayCommand(this.GoAddProduct);
 
@@ -60,14 +69,18 @@
                     PageName = "AboutPage",
                     Title = "About"
                 },
-
+                new Menu
+                {
+                    Icon = "ic_person",
+                    PageName = "ProfilePage",
+                    Title = "Modify User"
+                },
                 new Menu
                 {
                     Icon = "ic_phonelink_setup",
                     PageName = "SetupPage",
                     Title = "Setup"
                 },
-
                 new Menu
                 {
                     Icon = "ic_exit_to_app",
