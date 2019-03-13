@@ -2,7 +2,7 @@
 {
     using Newtonsoft.Json;
 
-    public partial class City
+    public class City
     {
         [JsonProperty("id")]
         public int Id { get; set; }

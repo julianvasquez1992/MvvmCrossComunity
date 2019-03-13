@@ -18,6 +18,5 @@
         {
             return Ok(this.countryRepository.GetCountriesWithCities());
         }
-
     }
 }

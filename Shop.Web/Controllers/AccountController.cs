@@ -6,6 +6,7 @@
     using System.Security.Claims;
     using System.Text;
     using System.Threading.Tasks;
+    using Data;
     using Data.Entities;
     using Helpers;
     using Microsoft.AspNetCore.Identity;
@@ -13,7 +14,6 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.IdentityModel.Tokens;
     using Models;
-    using Shop.Web.Data;
 
     public class AccountController : Controller
     {
