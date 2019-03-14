@@ -1,14 +1,14 @@
 ﻿namespace Shop.UIForms.ViewModels
 {
+    using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Windows.Input;
+    using Common.Helpers;
     using Common.Models;
     using Common.Services;
     using GalaSoft.MvvmLight.Command;
-    using System.Collections.Generic;
     using Xamarin.Forms;
-    using Shop.Common.Helpers;
 
     public class RegisterViewModel : BaseViewModel
     {
@@ -115,8 +115,8 @@
             if (string.IsNullOrEmpty(this.FirstName))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error", 
-                    "You must enter the first name.", 
+                    "Error",
+                    "You must enter the first name.",
                     "Accept");
                 return;
             }

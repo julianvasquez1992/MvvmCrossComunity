@@ -1,13 +1,12 @@
 ﻿namespace Shop.UIForms.ViewModels
 {
-    using System;
     using System.Windows.Input;
+    using Common.Helpers;
     using Common.Models;
     using Common.Services;
     using GalaSoft.MvvmLight.Command;
+    using Helpers;
     using Newtonsoft.Json;
-    using Shop.Common.Helpers;
-    using Shop.UIForms.Helpers;
     using Views;
     using Xamarin.Forms;
 
@@ -53,8 +52,8 @@
             if (string.IsNullOrEmpty(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    Languages.Error, 
-                    Languages.EmailMessage, 
+                    Languages.Error,
+                    Languages.EmailMessage,
                     Languages.Accept);
                 return;
             }
@@ -62,10 +61,10 @@
             if (string.IsNullOrEmpty(this.Password))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    Languages.Error, 
-                    Languages.PasswordMessage, 
+                    Languages.Error,
+                    Languages.PasswordMessage,
                     Languages.Accept);
-                    return;
+                return;
             }
 
             this.IsRunning = true;
@@ -90,8 +89,8 @@
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    Languages.Error, 
-                    Languages.EmailOrPasswordIncorrect, 
+                    Languages.Error,
+                    Languages.EmailOrPasswordIncorrect,
                     Languages.Accept);
                 return;
             }
@@ -102,8 +101,8 @@
                 url,
                 "/api",
                 "/Account/GetUserByEmail",
-                this.Email, 
-                "bearer", 
+                this.Email,
+                "bearer",
                 token.Token);
 
             var user = (User)response2.Result;
