@@ -1,10 +1,10 @@
 ﻿namespace Shop.UIForms.ViewModels
 {
-    using System.Windows.Input;
+    using Common.Helpers;
     using Common.Models;
     using Common.Services;
     using GalaSoft.MvvmLight.Command;
-    using Shop.Common.Helpers;
+    using System.Windows.Input;
     using Xamarin.Forms;
 
     public class ChangePasswordViewModel : BaseViewModel

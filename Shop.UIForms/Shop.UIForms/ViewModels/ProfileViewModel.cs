@@ -1,16 +1,15 @@
 ﻿namespace Shop.UIForms.ViewModels
 {
-    using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Windows.Input;
+    using Common.Helpers;
     using Common.Models;
     using Common.Services;
     using GalaSoft.MvvmLight.Command;
     using Newtonsoft.Json;
-    using Shop.Common.Helpers;
-    using Shop.UIForms.Views;
+    using Views;
     using Xamarin.Forms;
 
     public class ProfileViewModel : BaseViewModel
@@ -188,9 +187,9 @@
             var response = await this.apiService.PutAsync(
                 url,
                 "/api",
-                "/Account", 
-                this.User, 
-                "bearer",  
+                "/Account",
+                this.User,
+                "bearer",
                 MainViewModel.GetInstance().Token.Token);
 
             this.IsRunning = false;
