@@ -175,6 +175,58 @@
                 Name = "Peru"
             });
 
+            var citiesChile = new List<City>();
+            citiesChile.Add(new City { Name = "Santiago" });
+            citiesChile.Add(new City { Name = "Valdivia" });
+            citiesChile.Add(new City { Name = "Concepcion" });
+            citiesChile.Add(new City { Name = "Puerto Montt" });
+            citiesChile.Add(new City { Name = "Temucos" });
+            citiesChile.Add(new City { Name = "La Sirena" });
+
+            this.context.Countries.Add(new Country
+            {
+                Cities = citiesChile,
+                Name = "Chile"
+            });
+
+            var citiesUruguay = new List<City>();
+            citiesUruguay.Add(new City { Name = "Montevideo" });
+            citiesUruguay.Add(new City { Name = "Punta del Este" });
+            citiesUruguay.Add(new City { Name = "Colonia del Sacramento" });
+            citiesUruguay.Add(new City { Name = "Las Piedras" });
+
+            this.context.Countries.Add(new Country
+            {
+                Cities = citiesUruguay,
+                Name = "Uruguay"
+            });
+
+            var citiesBolivia = new List<City>();
+            citiesBolivia.Add(new City { Name = "La Paz" });
+            citiesBolivia.Add(new City { Name = "Sucre" });
+            citiesBolivia.Add(new City { Name = "Potosi" });
+            citiesBolivia.Add(new City { Name = "Cochabamba" });
+
+            this.context.Countries.Add(new Country
+            {
+                Cities = citiesBolivia,
+                Name = "Bolivia"
+            });
+
+            var citiesVenezuela = new List<City>();
+            citiesVenezuela.Add(new City { Name = "Caracas" });
+            citiesVenezuela.Add(new City { Name = "Valencia" });
+            citiesVenezuela.Add(new City { Name = "Maracaibo" });
+            citiesVenezuela.Add(new City { Name = "Ciudad Bolivar" });
+            citiesVenezuela.Add(new City { Name = "Maracay" });
+            citiesVenezuela.Add(new City { Name = "Barquisimeto" });
+
+            this.context.Countries.Add(new Country
+            {
+                Cities = citiesVenezuela,
+                Name = "Venezuela"
+            });
+
             await this.context.SaveChangesAsync();
         }
 
