@@ -2,9 +2,9 @@
 {
     using System.Windows.Input;
     using Common.Helpers;
+    using Common.Models;
     using Common.Services;
     using GalaSoft.MvvmLight.Command;
-    using Shop.Common.Models;
     using Xamarin.Forms;
 
     public class RememberPasswordViewModel : BaseViewModel
