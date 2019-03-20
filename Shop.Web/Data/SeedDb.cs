@@ -25,11 +25,11 @@
         {
             await this.context.Database.EnsureCreatedAsync();
 
-            await this.CheckRoles();
+            await this.CheckRolesAsync();
 
             if (!this.context.Countries.Any())
             {
-                await this.CountriesAndCities();
+                await this.AddCountriesAndCitiesAsync();
             }
 
             await this.CheckUser("brad@gmail.com", "Brad", "Pit", "Customer");
@@ -101,7 +101,7 @@
             return user;
         }
 
-        private async Task CountriesAndCities()
+        private async Task AddCountriesAndCitiesAsync()
         {
             this.AddCountry("Colombia", new string[]  { "Medellín", "Bogota", "Calí", "Barranquilla", "Bucaramanga", "Cartagena",  "Pereira" });
             this.AddCountry("Argentina", new string[]  { "Córdoba", "Buenos Aires", "Rosario", "Tandil", "Salta", "Mendoza" });
@@ -127,7 +127,7 @@
             });
         }
 
-        private async Task CheckRoles()
+        private async Task CheckRolesAsync()
         {
             await this.userHelper.CheckRoleAsync("Admin");
             await this.userHelper.CheckRoleAsync("Customer");
