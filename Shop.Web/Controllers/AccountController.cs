@@ -363,14 +363,16 @@
         public async Task<IActionResult> Index()
         {
             var users = await this.userHelper.GetAllUsersAsync();
-            foreach (var user in users)
-            {
-                var myUser = await this.userHelper.GetUserByIdAsync(user.Id);
-                if (myUser != null)
-                {
-                    user.IsAdmin = await this.userHelper.IsUserInRoleAsync(myUser, "Admin");
-                }
-            }
+            // Lanbda thanks to Gonzalo Jaimes
+            users.ForEach(async u => u.IsAdmin = await this.userHelper.IsUs­erInRoleAsync(u, "Admin"));
+            //foreach (var user in users)
+            //{
+            //    var myUser = await this.userHelper.GetUserByIdAsync(user.Id);
+            //    if (myUser != null)
+            //    {
+            //        user.IsAdmin = await this.userHelper.IsUserInRoleAsync(myUser, "Admin");
+            //    }
+            //}
 
             return this.View(users);
         }
