@@ -1,18 +1,18 @@
-﻿namespace Shop.UIClassic.iOS
-{
-    using Newtonsoft.Json;
-    using Shop.Common.Helpers;
-    using Shop.Common.Models;
-    using Shop.Common.Services;
-    using System;
-    using System.Collections.Generic;
-    using UIKit;
+using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Shop.Common.Helpers;
+using Shop.Common.Models;
+using Shop.Common.Services;
+using UIKit;
 
+namespace Shop.UIClassic.iOS
+{
     public partial class ViewController : UIViewController
     {
         private ApiService apiService;
 
-        public ViewController(IntPtr handle) : base(handle)
+        protected ViewController(IntPtr handle) : base(handle)
         {
             this.apiService = new ApiService();
         }
@@ -20,9 +20,9 @@
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            this.ActivityIndicator.StopAnimating();
             this.EmailText.Text = "jzuluaga55@gmail.com";
             this.PasswordText.Text = "123456";
-            this.ActivityIndicator.StopAnimating();
         }
 
         public override void DidReceiveMemoryWarning()
@@ -48,6 +48,10 @@
                 this.PresentViewController(alert, true, null);
                 return;
             }
+
+            //var ok = UIAlertController.Create("Ok", "Fuck yeah!", UIAlertControllerStyle.Alert);
+            //ok.AddAction(UIAlertAction.Create("Accept", UIAlertActionStyle.Default, null));
+            //this.PresentViewController(ok, true, null);
 
             this.DoLogin();
         }

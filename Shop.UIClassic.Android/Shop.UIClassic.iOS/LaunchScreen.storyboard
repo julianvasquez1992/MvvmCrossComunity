@@ -21,18 +21,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="220" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="122" y="230" width="77" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="197" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="116" y="230" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint id="221" firstItem="220" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="210"/>
-                            <constraint id="222" firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="220" secondAttribute="bottom" constant="229"/>
-                            <constraint id="223" firstItem="220" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="106"/>
-                            <constraint id="224" firstAttribute="trailingMargin" secondItem="220" secondAttribute="trailing" constant="105"/>
+                            <constraint id="198" firstItem="197" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="210"/>
+                            <constraint id="199" firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="229"/>
+                            <constraint id="200" firstItem="197" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="100"/>
+                            <constraint id="202" firstAttribute="trailingMargin" secondItem="197" secondAttribute="trailing" constant="99"/>
                         </constraints>
                     </view>
                 </viewController>
