@@ -57,7 +57,7 @@
             this.navigationService = navigationService;
 
             this.Email = "jzuluaga55@gmail.com";
-            this.Password = "Roger1974";
+            this.Password = "123456";
             this.IsLoading = false;
         }
 
