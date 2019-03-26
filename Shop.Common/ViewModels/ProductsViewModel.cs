@@ -64,7 +64,6 @@
             this.Products = (List<Product>)response.Result;
         }
 
-
         private async void AddProduct()
         {
             await this.navigationService.Navigate<AppProductViewModel>();

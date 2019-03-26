@@ -31,13 +31,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UICross.Android", "UICross.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVVMCrossTestConcept", "MVVMCrossTestConcept", "{5704C078-B999-4095-BD7D-D64E03D48935}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWays.Core", "FourWays.Core\FourWays.Core.csproj", "{CB09B52F-6D7E-4AC9-AD87-E5DAA97604DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FourWays.Core", "FourWays.Core\FourWays.Core.csproj", "{CB09B52F-6D7E-4AC9-AD87-E5DAA97604DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWays.FormsTraditional.Android", "FourWays.FormsTraditional\FourWays.FormsTraditional.Android\FourWays.FormsTraditional.Android.csproj", "{C6FFE2E0-1347-49B0-B1B9-721864AC0138}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWays.FormsTraditional.iOS", "FourWays.FormsTraditional\FourWays.FormsTraditional.iOS\FourWays.FormsTraditional.iOS.csproj", "{73187E12-A051-4603-A976-C26519E7B030}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWays.FormsTraditional", "FourWays.FormsTraditional\FourWays.FormsTraditional\FourWays.FormsTraditional.csproj", "{74868660-BFE7-4F21-B817-6B6D8BC722E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FourWays.FormsTraditional", "FourWays.FormsTraditional\FourWays.FormsTraditional\FourWays.FormsTraditional.csproj", "{74868660-BFE7-4F21-B817-6B6D8BC722E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWays.Classic.Droid", "FourWays.Classic.Droid\FourWays.Classic.Droid.csproj", "{F5C45F48-ADB4-4E15-9E43-825EB6503DD6}"
 EndProject
@@ -51,7 +51,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWays.FormsCross.Android
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWays.FormsCross.iOS", "FourWays.FormsCross\FourWays.FormsCross.iOS\FourWays.FormsCross.iOS.csproj", "{25504839-730A-47DD-B942-9695E607F717}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWays.FormsCross", "FourWays.FormsCross\FourWays.FormsCross\FourWays.FormsCross.csproj", "{4C17CA82-8963-40E5-B8FE-5CBC383CDBAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FourWays.FormsCross", "FourWays.FormsCross\FourWays.FormsCross\FourWays.FormsCross.csproj", "{4C17CA82-8963-40E5-B8FE-5CBC383CDBAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.UnitTest", "Shop.UnitTest\Shop.UnitTest.csproj", "{A671B650-9DED-4DD7-BCFD-37B101FD6949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -323,6 +325,18 @@ Global
 		{4C17CA82-8963-40E5-B8FE-5CBC383CDBAD}.Release|iPhone.Build.0 = Release|Any CPU
 		{4C17CA82-8963-40E5-B8FE-5CBC383CDBAD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{4C17CA82-8963-40E5-B8FE-5CBC383CDBAD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Release|iPhone.Build.0 = Release|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{A671B650-9DED-4DD7-BCFD-37B101FD6949}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

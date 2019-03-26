@@ -304,13 +304,13 @@
 
             return View();
         }
-        public IActionResult RecoverPassword()
+        public IActionResult RecoverPassword2()
         {
             return this.View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> RecoverPassword(RecoverPasswordViewModel model)
+        public async Task<IActionResult> RecoverPassword2(RecoverPasswordViewModel model)
         {
             if (this.ModelState.IsValid)
             {
@@ -363,16 +363,16 @@
         public async Task<IActionResult> Index()
         {
             var users = await this.userHelper.GetAllUsersAsync();
+            //users.ForEach(async u => u.IsAdmin = await this.userHelper.IsUs­erInRoleAsync(u, "Admin"));
             // Lanbda thanks to Gonzalo Jaimes
-            users.ForEach(async u => u.IsAdmin = await this.userHelper.IsUs­erInRoleAsync(u, "Admin"));
-            //foreach (var user in users)
-            //{
-            //    var myUser = await this.userHelper.GetUserByIdAsync(user.Id);
-            //    if (myUser != null)
-            //    {
-            //        user.IsAdmin = await this.userHelper.IsUserInRoleAsync(myUser, "Admin");
-            //    }
-            //}
+            foreach (var user in users)
+            {
+                var myUser = await this.userHelper.GetUserByIdAsync(user.Id);
+                if (myUser != null)
+                {
+                    user.IsAdmin = await this.userHelper.IsUserInRoleAsync(myUser, "Admin");
+                }
+            }
 
             return this.View(users);
         }

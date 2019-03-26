@@ -29,10 +29,9 @@
         public ProductsViewModel()
         {
             this.apiService = new ApiService();
-            this.LoadProducts();
         }
 
-        private async void LoadProducts()
+        public async void LoadProducts()
         {
             this.IsRefreshing = true;
 
