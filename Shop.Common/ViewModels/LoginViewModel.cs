@@ -42,7 +42,7 @@
         {
             get
             {
-                this.loginCommand = this.loginCommand ?? new MvxCommand(this.DoLoginCommand);
+                this.loginCommand = this.loginCommand ?? new MvxCommand(this.Login);
                 return this.loginCommand;
             }
         }
@@ -61,7 +61,7 @@
             this.IsLoading = false;
         }
 
-        private async void DoLoginCommand()
+        private async void Login()
         {
             if (string.IsNullOrEmpty(this.Email))
             {
