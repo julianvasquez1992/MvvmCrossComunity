@@ -8,6 +8,7 @@
     using MvvmCross.ViewModels;
     using Newtonsoft.Json;
     using Services;
+    using Shop.Common.Utilities;
     using System.Collections.Generic;
     using System.Windows.Input;
 
@@ -18,6 +19,18 @@
         private readonly IDialogService dialogService;
         private readonly IMvxNavigationService navigationService;
         private MvxCommand addProductCommand;
+        private MvxCommand<Product> itemClickCommand;
+
+        //Simple ICommand interface implementation, simple click
+        public ICommand ItemClickCommand
+        {
+            get
+            {
+                this.itemClickCommand = new MvxCommand<Product>(OnItemClickCommand);
+                return itemClickCommand;
+            }
+             
+        }
 
         public List<Product> Products
         {
@@ -67,6 +80,12 @@
         private async void AddProduct()
         {
             await this.navigationService.Navigate<AppProductViewModel>();
+        }
+
+        //The method when the object was clicked
+        private async void OnItemClickCommand(Product product)
+        {
+            await this.navigationService.Navigate<ProductsDetailViewModel, NavigationArgs>(new NavigationArgs { ProductId = product.Id });
         }
     }
 }
