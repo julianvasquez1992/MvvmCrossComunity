@@ -2,4 +2,6 @@
   <string name="app_name">Shop</string>
   <string name="add_product">Add Product</string>
   <string name="action_settings">Settings</string>
+  <string name="OpenDrawerString">Open navigation drawer</string>
+  <string name="CloseDrawerString">Close navigation drawer</string>
 </resources>
