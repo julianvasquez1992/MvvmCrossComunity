@@ -14,31 +14,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <!-- content must go before menu because of z-order -->
-		<LinearLayout
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:orientation="vertical">
-			<android.support.v7.widget.Toolbar
-				xmlns:android="http://schemas.android.com/apk/res/android"
-				xmlns:app="http://schemas.android.com/apk/res-auto"
-				android:id="@+id/toolbar"
-				android:layout_width="match_parent"
-				android:layout_height="?attr/actionBarSize"
-				android:background="?attr/colorPrimary"
-				local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-				local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-				<android.support.constraint.ConstraintLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content">
-					<ImageView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						local:layout_constraintRight_toRightOf="parent"
-						local:MvxBind="Click AddProductCommand"
-						android:src="@drawable/ic_action_add_circle"/>
-				</android.support.constraint.ConstraintLayout>
-			</android.support.v7.widget.Toolbar>
-		</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"> 
+		
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                local:layout_constraintRight_toRightOf="parent"
+                local:MvxBind="Click AddProductCommand"
+                android:src="@drawable/ic_action_add_circle"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+	<FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
     <!-- menu -->
     <ListView
         android:id="@+id/drawerListView"

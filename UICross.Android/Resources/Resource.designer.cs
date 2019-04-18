@@ -6878,8 +6878,8 @@ namespace UICross.Android
 			// aapt resource value: 0x7f0900c6
 			public const int drawerLayout = 2131296454;
 			
-			// aapt resource value: 0x7f0900c8
-			public const int drawerListView = 2131296456;
+			// aapt resource value: 0x7f0900c9
+			public const int drawerListView = 2131296457;
 			
 			// aapt resource value: 0x7f0900aa
 			public const int editTextEmail = 2131296426;
@@ -6925,6 +6925,9 @@ namespace UICross.Android
 			
 			// aapt resource value: 0x7f090067
 			public const int forever = 2131296359;
+			
+			// aapt resource value: 0x7f0900c8
+			public const int frameLayout = 2131296456;
 			
 			// aapt resource value: 0x7f09000a
 			public const int ghost_view = 2131296266;
@@ -6986,14 +6989,14 @@ namespace UICross.Android
 			// aapt resource value: 0x7f0900ae
 			public const int loginButton = 2131296430;
 			
-			// aapt resource value: 0x7f0900cb
-			public const int masked = 2131296459;
+			// aapt resource value: 0x7f0900cc
+			public const int masked = 2131296460;
 			
 			// aapt resource value: 0x7f0900b6
 			public const int media_actions = 2131296438;
 			
-			// aapt resource value: 0x7f0900c9
-			public const int message = 2131296457;
+			// aapt resource value: 0x7f0900ca
+			public const int message = 2131296458;
 			
 			// aapt resource value: 0x7f090033
 			public const int middle = 2131296307;
@@ -7007,14 +7010,14 @@ namespace UICross.Android
 			// aapt resource value: 0x7f0900c4
 			public const int nameTextView = 2131296452;
 			
-			// aapt resource value: 0x7f0900cd
-			public const int nav_about = 2131296461;
-			
-			// aapt resource value: 0x7f0900cc
-			public const int nav_products = 2131296460;
-			
 			// aapt resource value: 0x7f0900ce
-			public const int nav_signout = 2131296462;
+			public const int nav_about = 2131296462;
+			
+			// aapt resource value: 0x7f0900cd
+			public const int nav_products = 2131296461;
+			
+			// aapt resource value: 0x7f0900cf
+			public const int nav_signout = 2131296463;
 			
 			// aapt resource value: 0x7f0900a2
 			public const int navigation_header_container = 2131296418;
@@ -7289,8 +7292,8 @@ namespace UICross.Android
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f0900ca
-			public const int visible = 2131296458;
+			// aapt resource value: 0x7f0900cb
+			public const int visible = 2131296459;
 			
 			// aapt resource value: 0x7f09003e
 			public const int withText = 2131296318;
