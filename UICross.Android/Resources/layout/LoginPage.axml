@@ -77,7 +77,7 @@
 			android:layout_marginLeft="15dp"
 			android:layout_marginBottom="2dp"
 			android:background="@drawable/button_new_user_corners"
-            local:MvxBind="Click LoginCommand"/>
+            local:MvxBind="Click RegisterCommand"/>
 
 		</LinearLayout>
 

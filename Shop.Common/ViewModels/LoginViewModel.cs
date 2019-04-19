@@ -15,6 +15,7 @@
         private string email;
         private string password;
         private MvxCommand loginCommand;
+        private MvxCommand registerCommand;
         private readonly IApiService apiService;
         private readonly IDialogService dialogService;
         private readonly IMvxNavigationService navigationService;
@@ -45,6 +46,11 @@
                 this.loginCommand = this.loginCommand ?? new MvxCommand(this.Login);
                 return this.loginCommand;
             }
+        }
+
+        public ICommand RegisterCommand
+        {
+            get => this.registerCommand ?? new MvxCommand(this.Register);
         }
 
         public LoginViewModel(
@@ -102,6 +108,11 @@
             this.IsLoading = false;
 
             await this.navigationService.Navigate<ProductsViewModel>();
+        }
+
+        private async void Register()
+        {
+            await this.navigationService.Navigate<RegisterViewModel>();
         }
     }
 }

@@ -6767,6 +6767,9 @@ namespace UICross.Android
 			// aapt resource value: 0x7f090029
 			public const int add = 2131296297;
 			
+			// aapt resource value: 0x7f0900cd
+			public const int addressName_layout = 2131296461;
+			
 			// aapt resource value: 0x7f09007f
 			public const int alertTitle = 2131296383;
 			
@@ -6821,6 +6824,9 @@ namespace UICross.Android
 			// aapt resource value: 0x7f0900bc
 			public const int chronometer = 2131296444;
 			
+			// aapt resource value: 0x7f0900cc
+			public const int cityName_layout = 2131296460;
+			
 			// aapt resource value: 0x7f090050
 			public const int clip_horizontal = 2131296336;
 			
@@ -6830,6 +6836,9 @@ namespace UICross.Android
 			// aapt resource value: 0x7f09003b
 			public const int collapseActionView = 2131296315;
 			
+			// aapt resource value: 0x7f0900d0
+			public const int confirmName_layout = 2131296464;
+			
 			// aapt resource value: 0x7f09009c
 			public const int container = 2131296412;
 			
@@ -6838,6 +6847,9 @@ namespace UICross.Android
 			
 			// aapt resource value: 0x7f09009d
 			public const int coordinator = 2131296413;
+			
+			// aapt resource value: 0x7f0900cb
+			public const int countryName_layout = 2131296459;
 			
 			// aapt resource value: 0x7f09007c
 			public const int custom = 2131296380;
@@ -6884,6 +6896,9 @@ namespace UICross.Android
 			// aapt resource value: 0x7f09008d
 			public const int edit_query = 2131296397;
 			
+			// aapt resource value: 0x7f0900ca
+			public const int emailName_layout = 2131296458;
+			
 			// aapt resource value: 0x7f090032
 			public const int end = 2131296306;
 			
@@ -6914,8 +6929,14 @@ namespace UICross.Android
 			// aapt resource value: 0x7f09004a
 			public const int fill_vertical = 2131296330;
 			
+			// aapt resource value: 0x7f0900c8
+			public const int firstName_layout = 2131296456;
+			
 			// aapt resource value: 0x7f090056
 			public const int @fixed = 2131296342;
+			
+			// aapt resource value: 0x7f0900c9
+			public const int flastName_layout = 2131296457;
 			
 			// aapt resource value: 0x7f090067
 			public const int forever = 2131296359;
@@ -6980,14 +7001,14 @@ namespace UICross.Android
 			// aapt resource value: 0x7f0900ae
 			public const int loginButton = 2131296430;
 			
-			// aapt resource value: 0x7f0900c9
-			public const int masked = 2131296457;
+			// aapt resource value: 0x7f0900d3
+			public const int masked = 2131296467;
 			
 			// aapt resource value: 0x7f0900b6
 			public const int media_actions = 2131296438;
 			
-			// aapt resource value: 0x7f0900c7
-			public const int message = 2131296455;
+			// aapt resource value: 0x7f0900d1
+			public const int message = 2131296465;
 			
 			// aapt resource value: 0x7f090033
 			public const int middle = 2131296307;
@@ -7040,8 +7061,14 @@ namespace UICross.Android
 			// aapt resource value: 0x7f09000b
 			public const int parent_matrix = 2131296267;
 			
+			// aapt resource value: 0x7f0900cf
+			public const int passwordName_layout = 2131296463;
+			
 			// aapt resource value: 0x7f09005b
 			public const int percent = 2131296347;
+			
+			// aapt resource value: 0x7f0900ce
+			public const int phoneName_layout = 2131296462;
 			
 			// aapt resource value: 0x7f09004f
 			public const int pin = 2131296335;
@@ -7235,6 +7262,9 @@ namespace UICross.Android
 			// aapt resource value: 0x7f09007e
 			public const int title_template = 2131296382;
 			
+			// aapt resource value: 0x7f0900c7
+			public const int title_textView = 2131296455;
+			
 			// aapt resource value: 0x7f0900c6
 			public const int toolbar_cross = 2131296454;
 			
@@ -7274,8 +7304,8 @@ namespace UICross.Android
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f0900c8
-			public const int visible = 2131296456;
+			// aapt resource value: 0x7f0900d2
+			public const int visible = 2131296466;
 			
 			// aapt resource value: 0x7f09003e
 			public const int withText = 2131296318;
@@ -7526,25 +7556,28 @@ namespace UICross.Android
 			public const int ProductsPage = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int select_dialog_item_material = 2130968637;
+			public const int register_page = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int select_dialog_multichoice_material = 2130968638;
+			public const int select_dialog_item_material = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int select_dialog_singlechoice_material = 2130968639;
+			public const int select_dialog_multichoice_material = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int SplashPage = 2130968640;
+			public const int select_dialog_singlechoice_material = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int support_simple_spinner_dropdown_item = 2130968641;
+			public const int SplashPage = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int toolbar = 2130968642;
+			public const int support_simple_spinner_dropdown_item = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int tooltip = 2130968643;
+			public const int toolbar = 2130968643;
+			
+			// aapt resource value: 0x7f040044
+			public const int tooltip = 2130968644;
 			
 			static Layout()
 			{
