@@ -67,6 +67,7 @@
     <Compile Include="Views\AboutFrag.cs" />
     <Compile Include="Views\AddProductView.cs" />
     <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\ProductDetailView.cs" />
     <Compile Include="Views\ProductsView.cs" />
     <Compile Include="Views\RegisterView.cs" />
@@ -158,9 +159,6 @@
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
-      <Version>28.0.0.1</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.v7.CardView">
       <Version>28.0.0.1</Version>
     </PackageReference>
@@ -226,6 +224,11 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Settings.axml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

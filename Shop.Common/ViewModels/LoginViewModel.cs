@@ -107,7 +107,7 @@
             Settings.Token = JsonConvert.SerializeObject(token);
             this.IsLoading = false;
 
-            await this.navigationService.Navigate<ProductsViewModel>();
+            await this.navigationService.Navigate<MainViewModel>();
         }
 
         private async void Register()
