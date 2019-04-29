@@ -7598,16 +7598,22 @@ namespace UICross.Android
 			public const int Settings = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int SplashPage = 2130968644;
+			public const int spinner_dropdown = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int support_simple_spinner_dropdown_item = 2130968645;
+			public const int spinner_item = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int toolbar = 2130968646;
+			public const int SplashPage = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int tooltip = 2130968647;
+			public const int support_simple_spinner_dropdown_item = 2130968647;
+			
+			// aapt resource value: 0x7f040048
+			public const int toolbar = 2130968648;
+			
+			// aapt resource value: 0x7f040049
+			public const int tooltip = 2130968649;
 			
 			static Layout()
 			{
